@@ -1,69 +1,70 @@
 /* External Resource Citation: https://www.w3schools.com/ --> read through some articles to have a better understanding of how to use css */
+
 /* for the size and margin of logo image */
 #logo-img {
     width: 400px;
     height: 205px;
     margin-right: 10px;
     margin-top: 20px;
-  }
-  
-  /* turns all text to Helvetica font */
-  .txt {
-    font-family: Helvetica;
-  }
-  
-  /* logo takes up 20% of the space at the top */
-  #left-side {
-    flex: 20%;
-  }
-  /* everything else to the side of the logo takes up 80% of the space */
-  #right-side {
-    flex: 80%;
-  }
-  /* creates spacing and placement for the navigation buttons at the top */
-  #menu-btns {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 50px; 
-    margin-top: 30px;
-    margin-bottom: 20px;
-  }
-  /* creates look for each navigation button */
-  .menu-btn {
-    margin-left: 40px;
-    margin-right: 20px;
-    background-color: white;
-    font-size: 16px;
-    border: none;
-  }
-  /* creates the yellow background and bold text whenever user hovers over the navigation buttons */
-  .menu-btn:hover {
-    background-color: yellow;
-    font-weight: bold;
-  }
-  /* creates bolder line underneath the navigation buttons */
-  #hr-line {
-    border: 2px solid black;
-    margin-bottom: 45px;
-  }
-  /* creates look of slogan underneath line */
-  #slogan-txt {
-    font-size: 25px;
-    font-weight: 200;
-  }
-  /* creates spacing between the heading of webpage and the cinnamon roll information */
-  #header {
-    margin-bottom: 60px;
-  }
-  
-  /* styles the text representing the number of items and total cost at the top right corner */
-  #numeroItems, #totalCost {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 70px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-family: Helvetica;
-    font-size: 12px;
-  }
-  
+}
+
+/* turns all text to Helvetica font */
+.txt {
+  font-family: Helvetica;
+}
+
+/* logo takes up 20% of the space at the top */
+#left-side {
+  flex: 20%;
+}
+/* everything else to the side of the logo takes up 80% of the space */
+#right-side {
+  flex: 80%;
+}
+/* creates spacing and placement for the navigation buttons at the top */
+#menu-btns {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 50px; 
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+/* creates look for each navigation button */
+.menu-btn {
+  margin-left: 40px;
+  margin-right: 20px;
+  background-color: white;
+  font-size: 16px;
+  border: none;
+}
+/* creates the yellow background and bold text whenever user hovers over the navigation buttons */
+.menu-btn:hover {
+  background-color: yellow;
+  font-weight: bold;
+}
+/* creates bolder line underneath the navigation buttons */
+#hr-line {
+  border: 2px solid black;
+  margin-bottom: 45px;
+}
+/* creates look of slogan underneath line */
+#slogan-txt {
+  font-size: 25px;
+  font-weight: 200;
+}
+/* creates spacing between the heading of webpage and the cinnamon roll information */
+#header {
+  margin-bottom: 60px;
+}
+
+/* styles the text representing the number of items and total cost at the top right corner */
+#numeroItems, #totalCost {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 70px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: Helvetica;
+  font-size: 12px;
+}
+

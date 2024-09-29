@@ -133,7 +133,7 @@
   margin-bottom: 60px;
 }
 /* styles the popup that shows up when clicking on add to cart buttons */
-#costPopup {
+/* #costPopup {
   display: none;
   position: fixed;
   top: 8%;
@@ -144,27 +144,27 @@
   width: 170px;
   height: 100px;
   z-index: 1;
-}
+} */
 /* styles the text that appears in popup */
-.orderContent {
+/* .orderContent {
   background-color: white;
   text-align: left;
   font-family: Helvetica;
   font-size: 12px;
-}
+} */
 /* removes margins between lines of text in popup except for first line of text in popup */
-.content {
+/* .content {
   margin-top: 0px;
   margin-bottom: 0px;
-}
+} */
 /* removes top margin from first line of text in popup */
-#addLine {
+/* #addLine {
   margin-top: 0px;
-}
+} */
 /* makes text that contains the type of cinnamon roll in the popup bold */
-#typeLine {
+/* #typeLine {
   font-weight: bold;
-}
+} */
 /* styles the text representing the number of items and total cost at the top right corner */
 #numeroItems, #totalCost {
   display: flex;

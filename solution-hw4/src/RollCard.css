@@ -1,5 +1,4 @@
 /* External Resource Citation: https://www.w3schools.com/ --> read through some articles to have a better understanding of how to use css */
-/* for the size and margin of logo image */
 
 /* for the rest of the cinnamon roll images on the web page */
 .croll-img {
@@ -89,8 +88,8 @@
 }
 
 /* styles the popup that shows up when clicking on add to cart buttons */
-#costPopup {
-    display: none;
+.costPopup {
+    /* display: block; */
     position: fixed;
     top: 8%;
     bottom: 90%;
@@ -99,8 +98,9 @@
     background-color: white;
     width: 170px;
     height: 100px;
-    z-index: 1;
+    z-index: 9999;
 }
+
 /* styles the text that appears in popup */
 .orderContent {
     background-color: white;
@@ -114,10 +114,10 @@
     margin-bottom: 0px;
 }
 /* removes top margin from first line of text in popup */
-#addLine {
+.addLine {
     margin-top: 0px;
 }
 /* makes text that contains the type of cinnamon roll in the popup bold */
-#typeLine {
+.typeLine {
     font-weight: bold;
 }
