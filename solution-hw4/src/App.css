@@ -1,0 +1,177 @@
+/* External Resource Citation: https://www.w3schools.com/ --> read through some articles to have a better understanding of how to use css */
+/* for the size and margin of logo image */
+#logo-img {
+  width: 400px;
+  height: 205px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+/* for the rest of the cinnamon roll images on the web page */
+.croll-img {
+  width: 260px;
+  height: 260px;
+  border: 2px solid;
+}
+/* creates grid-like structure for placement of each cinnamon roll on the web page */
+#croll-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  justify-content: space-between;
+  row-gap: 100px;
+  column-gap: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+/* creates the width and margins for each cinnamon roll placement */
+.crolls {
+  margin-left: auto;
+  margin-right: auto;
+  width: 260px;
+}
+/* creates spacing between the divs */
+.glazing, .pack-size, .cart, #header {
+  display: flex;
+  justify-content: space-between;
+}
+/* adds spacing between the pack size buttons, the Add to Cart button, and the dropdown menu */
+.pack-buttons {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+/* creates the look for the buttons and dropdown for each cinnamon roll */
+.btn, .btn-pack, .dropdown {
+  border: 2px black solid;
+  background-color: white;
+  height: 30px;
+}
+/* creates width and height of pack size buttons */
+.btn-pack {
+  width: 34px;
+  height: 34px;
+}
+/* this is what creates the light gray background whenever the pack size buttons are clicked on */
+.btn-pack:focus {
+  background-color: lightgray;
+}
+/* creates bold text for whatever text on the webpage needs it */
+.bold-txt {
+  font-weight: bold;
+}
+/* turns all text to Helvetica font */
+.txt {
+  font-family: Helvetica;
+}
+/* creates yellow background whenever a user hovers over the Add to Cart button */
+.add-btn:hover {
+  background-color: yellow;
+}
+/* gives text a bigger font size */
+.bigger {
+  font-size: 16px;
+}
+/* gives text a smaller font size */
+.smaller {
+  font-size: 14px;
+}
+/* gives button specific width and margin */
+.single-btn {
+  width: 150px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+/* gives Add to Cart button a specific look */
+.add-btn {
+  border: 2px black solid;
+  background-color: white;
+  height: 30px;
+  width: 150px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+/* logo takes up 20% of the space at the top */
+#left-side {
+  flex: 20%;
+}
+/* everything else to the side of the logo takes up 80% of the space */
+#right-side {
+  flex: 80%;
+}
+/* creates spacing and placement for the navigation buttons at the top */
+#menu-btns {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 50px; 
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+/* creates look for each navigation button */
+.menu-btn {
+  margin-left: 40px;
+  margin-right: 20px;
+  background-color: white;
+  font-size: 16px;
+  border: none;
+}
+/* creates the yellow background and bold text whenever user hovers over the navigation buttons */
+.menu-btn:hover {
+  background-color: yellow;
+  font-weight: bold;
+}
+/* creates bolder line underneath the navigation buttons */
+#hr-line {
+  border: 2px solid black;
+  margin-bottom: 45px;
+}
+/* creates look of slogan underneath line */
+#slogan-txt {
+  font-size: 25px;
+  font-weight: 200;
+}
+/* creates spacing between the heading of webpage and the cinnamon roll information */
+#header {
+  margin-bottom: 60px;
+}
+/* styles the popup that shows up when clicking on add to cart buttons */
+/* #costPopup {
+  display: none;
+  position: fixed;
+  top: 8%;
+  bottom: 90%;
+  right: 3%;
+  border: 1px black solid;
+  background-color: white;
+  width: 170px;
+  height: 100px;
+  z-index: 1;
+} */
+/* styles the text that appears in popup */
+/* .orderContent {
+  background-color: white;
+  text-align: left;
+  font-family: Helvetica;
+  font-size: 12px;
+} */
+/* removes margins between lines of text in popup except for first line of text in popup */
+/* .content {
+  margin-top: 0px;
+  margin-bottom: 0px;
+} */
+/* removes top margin from first line of text in popup */
+/* #addLine {
+  margin-top: 0px;
+} */
+/* makes text that contains the type of cinnamon roll in the popup bold */
+/* #typeLine {
+  font-weight: bold;
+} */
+/* styles the text representing the number of items and total cost at the top right corner */
+#numeroItems, #totalCost {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 70px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: Helvetica;
+  font-size: 12px;
+}
