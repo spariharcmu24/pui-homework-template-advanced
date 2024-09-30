@@ -9,6 +9,8 @@ import Roll from '../../RollCard';
 // https://medium.com/@ozhanli/passing-data-from-child-to-parent-components-in-react-e347ea60b1bb --> helped me understand how to get data from a child component
 // https://stackoverflow.com/questions/26253351/correct-modification-of-state-arrays-in-react-js --> helped me understand how to add an element to a React state array
 
+// Asked Jade for help with any questions I had regarding logic for code
+
 // This file acts as the homepage for the website.
 class Homepage extends Component {
   // We create a state property called listCart to create a list of all the orders made in the website.
