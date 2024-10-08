@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/pui-homework-template-advanced/static/css/main.14bf3ef6.css",
-    "main.js": "/pui-homework-template-advanced/static/js/main.696a3044.js",
-    "static/js/453.42de2504.chunk.js": "/pui-homework-template-advanced/static/js/453.42de2504.chunk.js",
+    "main.css": "/pui-homework-template-advanced/static/css/main.c79d909d.css",
+    "main.js": "/pui-homework-template-advanced/static/js/main.ba6a7427.js",
+    "static/js/453.43a8c446.chunk.js": "/pui-homework-template-advanced/static/js/453.43a8c446.chunk.js",
     "index.html": "/pui-homework-template-advanced/index.html",
-    "main.14bf3ef6.css.map": "/pui-homework-template-advanced/static/css/main.14bf3ef6.css.map",
-    "main.696a3044.js.map": "/pui-homework-template-advanced/static/js/main.696a3044.js.map",
-    "453.42de2504.chunk.js.map": "/pui-homework-template-advanced/static/js/453.42de2504.chunk.js.map"
+    "main.c79d909d.css.map": "/pui-homework-template-advanced/static/css/main.c79d909d.css.map",
+    "main.ba6a7427.js.map": "/pui-homework-template-advanced/static/js/main.ba6a7427.js.map",
+    "453.43a8c446.chunk.js.map": "/pui-homework-template-advanced/static/js/453.43a8c446.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.14bf3ef6.css",
-    "static/js/main.696a3044.js"
+    "static/css/main.c79d909d.css",
+    "static/js/main.ba6a7427.js"
   ]
 }
