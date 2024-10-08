@@ -48,9 +48,9 @@
     height: 34px;
 }
 /* this is what creates the light gray background whenever the pack size buttons are clicked on */
-.btn-pack:focus {
+/* .btn-pack:focus {
     background-color: lightgray;
-}
+} */
 /* creates bold text for whatever text on the webpage needs it */
 .bold-txt {
     font-weight: bold;

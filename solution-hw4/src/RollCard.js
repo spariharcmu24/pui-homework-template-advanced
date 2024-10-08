@@ -17,8 +17,16 @@ class Roll extends Component {
             glazingOptions: ["Keep original", "Sugar milk", "Vanilla milk", "Double chocolate"],
             packSizeOptions: ["1", "3", "6", "12"],
             popup: false,
+            clickedIndex: false
         };    
     }
+
+    // updates base price for each roll a user can order
+    componentDidUpdate(prevProps) {
+        if (this.props.basePrice !== prevProps.basePrice) {
+            this.pricing();
+        }
+      }
 
     // The method below calculates the changing price of an item whenever a different pack size option or glazing option is clicked on in a specific Roll component.
     pricing(){
@@ -58,11 +66,17 @@ class Roll extends Component {
     // The event handler below changes the value of the React state property called packSize whenever a different pack size number is clicked on in the website for a specific Roll component.
     switchPackSizeHandler = (event) => {
         this.setState({packSize: event.target.value}, () => {
-            // console.log("updated pack size:", this.state.packSize);
             this.pricing();
-            // console.log(updatedPrice);
         });
     };
+
+    // two functions below helps with changing the color of the pack size buttons to gray when clicked on and to gray when it isn't clicked on
+    whenFocused = (index) => {
+        this.setState({clickedIndex: index})
+    }
+    whenBlurred = () => {
+        this.setState({clickedIndex: null})
+    }
 
     // The event handler below changes the value of the React state property called glazing whenever a different glazing option is clicked on in the website for a specific Roll component.
     switchGlazingHandler = (event) => {
@@ -82,7 +96,8 @@ class Roll extends Component {
             type: this.props.type,
             glazing: this.state.glazing,
             packSize: this.state.packSize,
-            updatedPrice: this.state.updatedPrice
+            updatedPrice: this.state.updatedPrice,
+            imageURL: this.props.imageURL
         };
         this.props.sendDataToHomepage(newRoll);
         this.setState({popup: true}, () => {
@@ -116,7 +131,7 @@ class Roll extends Component {
                 <div className="pack-buttons">
                     {this.state.packSizeOptions.map((option, ind) => {
                         return (
-                            <button onClick={this.switchPackSizeHandler} key={ind} value={option} className="btn-pack txt smaller">{option}</button>
+                            <button onFocus={() => this.whenFocused(ind)} onBlur={() => this.whenBlurred} onClick={this.switchPackSizeHandler} style={{backgroundColor: this.state.clickedIndex === ind ? 'lightgray' : 'white'}} key={ind} value={option} className="btn-pack txt smaller">{option}</button>
                         );
                     })}
                 </div>
