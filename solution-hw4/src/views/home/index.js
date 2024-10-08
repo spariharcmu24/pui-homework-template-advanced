@@ -5,12 +5,14 @@ import Roll from '../../RollCard';
 import './index.css';
 
 // External Resources Citation: 
+// https://sentry.io/answers/string-contains-substring-javascript/#:~:text=The%20includes()%20method,found%2C%20or%20false%20if%20not. --> helped me understand how to check if a string is a substring of another
+// https://www.w3schools.com/html/html_forms.asp --> helped me understand how to create a search bar and button
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort --> helped me understand how to use sort to order cinnamon rolls based on base price or name
 
 
 // This file acts as the homepage for the website.
 class Homepage extends Component {
-  // We create a state property called listCart to create a list of all the orders made in the website.
-  // also created state properties rolls, searchedRolls, and searched to keep track of search functionality and cart functionality
+  // Created state properties rolls, searchedRolls, and searched to keep track of search functionality, sort functionality, and cart functionality
   constructor(props) {
     super(props);
     this.state = {
@@ -64,13 +66,13 @@ class Homepage extends Component {
     })
   }
 
-  // list cart updates depending on if any orders were removed from the shopping cart
+  // list cart updates depending on if any orders were removed from the shopping cart, which occurs in Navbar.js
   handleDataFromNavBar = (data) => {
     this.setState({listCart: data});
   }
 
-  //gets the input and finds rolls that contains a substring of that input
-  //updates searchedRolls
+  // gets the input from the search field and finds rolls that contains a substring of that input in their names
+  // updates searchedRolls
   handleFilterRolls = (event) => {
     this.setState({searched: true});
     this.setState({searchedRolls: []});
@@ -90,22 +92,22 @@ class Homepage extends Component {
     }
   }
 
-  // orders the types of cinnamon rolls based on base price and name
+  // orders the types of cinnamon rolls based on base price and name and displays those rolls in that particular order
   ascendingOrder = (event) => {
     if (event.target.value === "Base Price"){
       let initialList = [...this.state.rolls];
       let searchedList = [...this.state.searchedRolls];
-      let tempListInitialRolls = initialList.sort((a, b) => a.basePrice - b.basePrice);
-      let tempListSearchedRolls = searchedList.sort((a, b) => a.basePrice - b.basePrice);
+      let tempListInitialRolls = initialList.sort((firstRoll, secondRoll) => firstRoll.basePrice - secondRoll.basePrice);
+      let tempListSearchedRolls = searchedList.sort((firstRoll, secondRoll) => firstRoll.basePrice - secondRoll.basePrice);
       this.setState({rolls: tempListInitialRolls})
       this.setState({searchedRolls: tempListSearchedRolls});
     }
     else{
       let initialList = [...this.state.rolls];
       let searchedList = [...this.state.searchedRolls];
-      let tempListInitialRolls = initialList.sort((a, b) => {
-        const rollA = a.type.toUpperCase();
-        const rollB = b.type.toUpperCase();
+      let tempListInitialRolls = initialList.sort((firstRoll, secondRoll) => {
+        const rollA = firstRoll.type.toUpperCase();
+        const rollB = secondRoll.type.toUpperCase();
         if (rollA < rollB) {
           return -1;
         }
@@ -114,9 +116,9 @@ class Homepage extends Component {
         }
         return 0;
       });
-      let tempListSearchedRolls = searchedList.sort((a, b) => {
-        const rollA = a.type.toUpperCase();
-        const rollB = b.type.toUpperCase();
+      let tempListSearchedRolls = searchedList.sort((firstRoll, secondRoll) => {
+        const rollA = firstRoll.type.toUpperCase();
+        const rollB = secondRoll.type.toUpperCase();
         if (rollA < rollB) {
           return -1;
         }
@@ -140,7 +142,8 @@ class Homepage extends Component {
           </header>
           {/* Navbar contains the logo, the slogan, the menu buttons, the number of items, and the total cost. */}
           {/* The listCart state property also gets passed through the Navbar component to calculate the total cost and the number of items. */}
-          {/* added search box and sorting dropdown */}
+          {/* this.handleDataFromNavbar is also added to Navbar call to get updated shopping cart list */}
+          {/* added search box and sorting dropdown as well */}
           <Navbar sendDataToHomepage={this.handleDataFromNavBar} listCart={this.state.listCart} />
           <div className="search-functions">
             <form className="search-box" action='#'>
@@ -157,7 +160,7 @@ class Homepage extends Component {
           </div>
           {/* <!-- croll list contains all the images, buttons, dropwdown menus, and text for each cinnamon roll --> */}
           {/* <!-- Each Roll contains an image with the same content for the text, buttons, and dropdown menus --> */}
-          {/* updating the list of rolls depending on search functionality or sorting functionality */}
+          {/* updating the list of rolls depending on search functionality and/or sorting functionality */}
           <div id="croll-list">
             {this.state.searched ? 
               (this.state.searchedRolls.length > 0 ? this.state.searchedRolls.map((option, ind) => {

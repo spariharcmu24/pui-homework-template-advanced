@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import './Navbar.css';
 
+// External Resources Citation:
+// https://sentry.io/answers/remove-specific-item-from-array/ --> helped me understand how to remove elements from an array using splice
+
+
 class Navbar extends Component {
   // A React state property called totalCost is created to store the totalCost value after it's calculated in calculateTotalCost
-  // also added property called showingItems to help display orders if shopping cart is not empty
+  // also added property called showingItems to help display orders in shopping cart if cart button is clicked on
   constructor(props) {
     super(props);
     this.state = {
@@ -25,7 +29,7 @@ class Navbar extends Component {
     return newTotalString;
   }
 
-  // changes the boolean value of showingItems state property depending on whether or not any orders are present
+  // changes the boolean value of showingItems state property depending on cart button is clicked on
   showItems = () => {
     if (this.state.showingItems === false){
       this.setState({showingItems: true});
@@ -35,7 +39,7 @@ class Navbar extends Component {
     }
   }
 
-  // removes any order items and sends changed array over to index.js
+  // removes a specific order item and sends changed array over to index.js using this.props.sendDataToHomepage
   removeItem = (ind) => {
     let tempListArr = this.props.listCart;
     tempListArr.splice(ind,1);
@@ -43,8 +47,8 @@ class Navbar extends Component {
   }
 
     render() {
-      // The method above is called inside the render function to regularly update the total cost, especially after any of the add to cart buttons are clicked on.
-      // added code to display shopping cart if cart button is clicked on, also shows that cart is empty when it doesn't have any orders
+      // added code to display shopping cart if cart button is clicked on, also shows that the cart is empty when it doesn't have any orders
+      // also added code to add remove button for each shopping cart item that helps to remove a specific item from that list
       let totalCostNav = this.calculateTotalCost();
       return (
         <div className="Navbar">

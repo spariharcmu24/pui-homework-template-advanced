@@ -57,7 +57,7 @@
   margin-bottom: 60px;
 }
 
-/* styles the text representing the number of items and total cost at the top right corner */
+/* styles the text representing the number of items and total cost */
 #numeroItems, #totalCost {
   display: flex;
   justify-content: flex-end;

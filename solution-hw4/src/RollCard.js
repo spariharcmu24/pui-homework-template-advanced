@@ -3,11 +3,16 @@ import './RollCard.css';
 
 // External Resources Citation: 
 // https://coderfiles-dev.vercel.app/blog/react-show-hide-after-few-seconds --> took inspiration from article to make popup appear for only a few seconds
+// https://stackoverflow.com/questions/53847415/change-the-color-of-button-when-onfocus-input --> took inspiration to create functions whenFocused and whenBlurred
+// https://stackoverflow.com/questions/74271812/changing-buttons-colours-on-click-in-react-js --> took inspiration to change a specific pack size button to gray depending on their index number
+
+// got help from Cella (TA) and Jade to understand how to use componentDidUpdate
 
 class Roll extends Component {
     // Multiple React state properties were created to keep track of different glazing options, pack sizes, and updated prices for different orders.
     // glazingOptions and packSizeOptions were specifically created to populate the glazing dropdown menus and pack size buttons.
     // popup was created to make a popup appear whenever an add to cart button is clicked on.
+    // clickedIndex keeps track of which pack size button is being clicked on
     constructor(props) {
         super(props);
         this.state = {
@@ -21,7 +26,7 @@ class Roll extends Component {
         };    
     }
 
-    // updates base price for each roll a user can order
+    // updates the base price for each roll a user can order, even when order of rolls is changed based on base price or name
     componentDidUpdate(prevProps) {
         if (this.props.basePrice !== prevProps.basePrice) {
             this.pricing();
@@ -70,7 +75,7 @@ class Roll extends Component {
         });
     };
 
-    // two functions below helps with changing the color of the pack size buttons to gray when clicked on and to gray when it isn't clicked on
+    // two functions below helps with changing the color of the pack size buttons to gray when clicked on and to white when it isn't clicked on
     whenFocused = (index) => {
         this.setState({clickedIndex: index})
     }
@@ -87,7 +92,7 @@ class Roll extends Component {
         });
     };
 
-    // Whenever an add to cart button is clicked on, an object literal is created with all the important information about the order, such as the type of roll, the pack size, the glazing option, and the price of the order.
+    // Whenever an add to cart button is clicked on, an object literal is created with all the important information about the order, such as the type of roll, the pack size, the glazing option, the price of the order and an image of the roll.
     // That object literal is passed back to the parent component, which is the Homepage component in index.js.
     // The second part of the method triggers the popup to appear for three seconds with all the information about the order by setting the React state property called popup to true whenever the add to cart buttons are clicked on.
     // popup is then set back to false after three seconds to hide the popup
@@ -128,6 +133,7 @@ class Roll extends Component {
                     <p className="txt smaller">Pack Size:</p>
                 </div>
                 {/* <!-- made sure to add all options for the pack size buttons by iterating through the React state property called packSizeOptions and populating the div with buttons that correspond to a specific pack size --> */}
+                {/* also made sure that pack size buttons turn gray when clicked on using inline styling */}
                 <div className="pack-buttons">
                     {this.state.packSizeOptions.map((option, ind) => {
                         return (
