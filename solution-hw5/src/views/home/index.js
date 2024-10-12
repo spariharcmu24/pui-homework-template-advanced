@@ -15,8 +15,13 @@ class Homepage extends Component {
   // Created state properties rolls, searchedRolls, and searched to keep track of search functionality, sort functionality, and cart functionality
   constructor(props) {
     super(props);
+    let listOfCartKeys = Object.keys(localStorage);
+    let listOfCartItems = [];
+    listOfCartKeys.map(key => listOfCartItems.push(JSON.parse(localStorage.getItem(key))))
+    // console.log(Object.keys(localStorage));
     this.state = {
-        listCart: [],
+        listCart:listOfCartItems,
+        // listCart: [],
         rolls: [
           {
             imageURL: process.env.PUBLIC_URL + "/assets/products/apple-cinnamon-roll.jpg",
@@ -58,12 +63,7 @@ class Homepage extends Component {
   // That object literal is then added to the listCart state property to keep track of orders.
   // This method is called on each time the Roll component is called in render.
   handleDataFromRollCard = (data) => {
-    // console.log(data);
-    this.setState( (prevState) => ({
-      listCart: [...prevState.listCart, data]
-    }), () => {
-      // console.log(this.state.listCart);
-    })
+    this.setState({listCart: data});
   }
 
   // list cart updates depending on if any orders were removed from the shopping cart, which occurs in Navbar.js
@@ -165,7 +165,7 @@ class Homepage extends Component {
             {this.state.searched ? 
               (this.state.searchedRolls.length > 0 ? this.state.searchedRolls.map((option, ind) => {
                 return (
-                  <Roll sendDataToHomepage={this.handleDataFromRollCard} key={ind} imageURL={option['imageURL']} type={option['type']} basePrice={option['basePrice']}/>
+                  <Roll listCart={this.state.listCart} sendDataToHomepage={this.handleDataFromRollCard} key={ind} imageURL={option['imageURL']} type={option['type']} basePrice={option['basePrice']}/>
                 );
                 }) : (
                   <p id="no-match">No match!</p>
@@ -173,7 +173,7 @@ class Homepage extends Component {
               :
               this.state.rolls.map((option, ind) => {
                 return (
-                  <Roll sendDataToHomepage={this.handleDataFromRollCard} key={ind} imageURL={option['imageURL']} type={option['type']} basePrice={option['basePrice']}/>
+                  <Roll listCart={this.state.listCart} sendDataToHomepage={this.handleDataFromRollCard} key={ind} imageURL={option['imageURL']} type={option['type']} basePrice={option['basePrice']}/>
                 );
               })       
             }

@@ -22,7 +22,8 @@ class Roll extends Component {
             glazingOptions: ["Keep original", "Sugar milk", "Vanilla milk", "Double chocolate"],
             packSizeOptions: ["1", "3", "6", "12"],
             popup: false,
-            clickedIndex: false
+            clickedIndex: false,
+            adder: 0
         };    
     }
 
@@ -62,7 +63,6 @@ class Roll extends Component {
             packMultiple = 10;
         }
         let newPricing =  (basePrice + glazePrice) * packMultiple;
-        // console.log("new pricing", newPricing)
         newPricing = newPricing.toFixed(2);
         newPricing = Number(newPricing).toFixed(2);
         this.setState({updatedPrice: newPricing})
@@ -86,9 +86,7 @@ class Roll extends Component {
     // The event handler below changes the value of the React state property called glazing whenever a different glazing option is clicked on in the website for a specific Roll component.
     switchGlazingHandler = (event) => {
         this.setState({glazing: event.target.value}, () => {
-            // console.log("updated glaze:", this.state.glazing)
             this.pricing();
-            // console.log(updatedPrice);
         });
     };
 
@@ -97,14 +95,22 @@ class Roll extends Component {
     // The second part of the method triggers the popup to appear for three seconds with all the information about the order by setting the React state property called popup to true whenever the add to cart buttons are clicked on.
     // popup is then set back to false after three seconds to hide the popup
     addCartHandler = () => {
+        this.setState({adder: this.state.adder+1})
         let newRoll = {
             type: this.props.type,
             glazing: this.state.glazing,
             packSize: this.state.packSize,
             updatedPrice: this.state.updatedPrice,
-            imageURL: this.props.imageURL
+            imageURL: this.props.imageURL,
+            adder: this.state.adder
         };
-        this.props.sendDataToHomepage(newRoll);
+        localStorage.setItem("CartItem-"+newRoll["type"]+"-"+newRoll["glazing"]+"-"+newRoll["packSize"]+"-"+newRoll["updatedPrice"]+"-"+newRoll["adder"], JSON.stringify(newRoll));
+        let listOfCartKeys = Object.keys(localStorage);
+        let listOfCartItems = [];
+        listOfCartKeys.map(key => listOfCartItems.push(JSON.parse(localStorage.getItem(key))))
+        console.log("printing out local storage without parsing the data after adding a cart item:", localStorage);
+        console.log("printing out parsed local storage after adding a cart item:", listOfCartItems);
+        this.props.sendDataToHomepage(listOfCartItems);
         this.setState({popup: true}, () => {
             setTimeout(() => {this.setState({popup: false})}, 3000);
         });

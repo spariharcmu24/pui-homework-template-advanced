@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Navbar.css';
+import CartItem from './CartItem';
 
 // External Resources Citation:
 // https://sentry.io/answers/remove-specific-item-from-array/ --> helped me understand how to remove elements from an array using splice
@@ -39,11 +40,8 @@ class Navbar extends Component {
     }
   }
 
-  // removes a specific order item and sends changed array over to index.js using this.props.sendDataToHomepage
-  removeItem = (ind) => {
-    let tempListArr = this.props.listCart;
-    tempListArr.splice(ind,1);
-    this.props.sendDataToHomepage(tempListArr);
+  handleDataFromCartItem = (data) => {
+    this.props.sendDataToHomepage(data);
   }
 
     render() {
@@ -82,14 +80,7 @@ class Navbar extends Component {
                     <div className="order-list">
                     {this.props.listCart.map((option, ind) => {
                       return (
-                        <div className="cart-ordercard" key={ind}>
-                            <img className="order-img" src={option["imageURL"]} />
-                            <p className="bottom-spacing">{option["type"]}</p>
-                            <p className="bottom-spacing">Glazing: {option["glazing"]}</p>
-                            <p className="bottom-spacing">Pack Size: {option["packSize"]}</p>
-                            <p className="bold-text bottom-spacing">$ {option["updatedPrice"]}</p>
-                            <button className="remove-button" onClick={() => this.removeItem(ind)}>Remove</button>
-                        </div>
+                        <CartItem key={ind} sendDataToNavBar={this.handleDataFromCartItem} option={option} ind={ind} listCart={this.props.listCart}/>
                       );})}
                     </div>
                   </div>
