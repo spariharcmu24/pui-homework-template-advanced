@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Navbar.css';
 import CartItem from './CartItem';
 
-// External Resources Citation:
+// External Resources Citation (for HW 5):
 // https://sentry.io/answers/remove-specific-item-from-array/ --> helped me understand how to remove elements from an array using splice
 
 
@@ -30,7 +30,7 @@ class Navbar extends Component {
     return newTotalString;
   }
 
-  // changes the boolean value of showingItems state property depending on cart button is clicked on
+  // changes the boolean value of showingItems state property depending on when cart button is clicked on
   showItems = () => {
     if (this.state.showingItems === false){
       this.setState({showingItems: true});
@@ -40,6 +40,7 @@ class Navbar extends Component {
     }
   }
 
+  // updated listOfCartItems in CartItem.js and sending it over to homepage in index.js
   handleDataFromCartItem = (data) => {
     this.props.sendDataToHomepage(data);
   }

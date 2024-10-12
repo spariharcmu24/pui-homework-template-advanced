@@ -4,23 +4,27 @@ import Navbar from '../../Navbar';
 import Roll from '../../RollCard';
 import './index.css';
 
-// External Resources Citation: 
+// External Resources Citation (for HW 5): 
 // https://sentry.io/answers/string-contains-substring-javascript/#:~:text=The%20includes()%20method,found%2C%20or%20false%20if%20not. --> helped me understand how to check if a string is a substring of another
 // https://www.w3schools.com/html/html_forms.asp --> helped me understand how to create a search bar and button
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort --> helped me understand how to use sort to order cinnamon rolls based on base price or name
 
+// External Resources Citation (for HW 6): 
+// https://stackoverflow.com/questions/64416788/how-to-return-all-items-from-local-storage --> took inspiration to figure out how to retrieve all items from local storage
+
 
 // This file acts as the homepage for the website.
 class Homepage extends Component {
-  // Created state properties rolls, searchedRolls, and searched to keep track of search functionality, sort functionality, and cart functionality
+  // Created state properties listCart, rolls, searchedRolls, and searched to keep track of search functionality, sort functionality, and cart functionality
   constructor(props) {
     super(props);
+    // attempted to retrieve the cart from the local storage in four lines below. Also created an empty cart if cart doesn't exist in local storage.
     let listOfCartKeys = Object.keys(localStorage);
     let listOfCartItems = [];
+    // deserialized a JSON to cart item instances using JSON.parse()
     listOfCartKeys.map(key => listOfCartItems.push(JSON.parse(localStorage.getItem(key))))
-    // console.log(Object.keys(localStorage));
     this.state = {
-        listCart:listOfCartItems,
+        listCart: listOfCartItems,
         // listCart: [],
         rolls: [
           {
@@ -59,14 +63,13 @@ class Homepage extends Component {
     };    
   }
 
-  // The method below gets data from the child component, which in this case is Roll in RollCard.js. Each time the Roll component is called on, data returns back an object literal that contains the type of cinnamon roll order, the pack size, the glaze, and the calculated price.
-  // That object literal is then added to the listCart state property to keep track of orders.
-  // This method is called on each time the Roll component is called in render.
+  // gets new list of cart items from RollCard.js by retrieving items from local storage and sets that updated list to this.state.listCart
   handleDataFromRollCard = (data) => {
     this.setState({listCart: data});
   }
 
-  // list cart updates depending on if any orders were removed from the shopping cart, which occurs in Navbar.js
+  // list cart updates depending on if any orders were removed from the shopping cart, which occurs in CartItem.js
+  // gets new list of cart items from Navbar.js and CartItem.js by retrieving items from local storage and sets that updated list to this.state.listCart
   handleDataFromNavBar = (data) => {
     this.setState({listCart: data});
   }

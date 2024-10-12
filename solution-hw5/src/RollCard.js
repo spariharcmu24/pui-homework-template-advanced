@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import './RollCard.css';
 
-// External Resources Citation: 
+// External Resources Citation (for HW 5): 
 // https://coderfiles-dev.vercel.app/blog/react-show-hide-after-few-seconds --> took inspiration from article to make popup appear for only a few seconds
 // https://stackoverflow.com/questions/53847415/change-the-color-of-button-when-onfocus-input --> took inspiration to create functions whenFocused and whenBlurred
 // https://stackoverflow.com/questions/74271812/changing-buttons-colours-on-click-in-react-js --> took inspiration to change a specific pack size button to gray depending on their index number
 
 // got help from Cella (TA) and Jade to understand how to use componentDidUpdate
+
+// External Resources Citation (for HW 6): 
+// https://stackoverflow.com/questions/19635077/adding-objects-to-array-in-localstorage --> took inspiration to figure out how to add another item to local storage while updating existing local storage
 
 class Roll extends Component {
     // Multiple React state properties were created to keep track of different glazing options, pack sizes, and updated prices for different orders.
@@ -91,7 +94,9 @@ class Roll extends Component {
     };
 
     // Whenever an add to cart button is clicked on, an object literal is created with all the important information about the order, such as the type of roll, the pack size, the glazing option, the price of the order and an image of the roll.
-    // That object literal is passed back to the parent component, which is the Homepage component in index.js.
+    // used addCartHandler function to serialize a cart item instance to JSON using JSON.stringify
+    // also stored a cart item’s JSON in localStorage when it is added to the shopping cart using localStorage.setItem()
+    // updating listOfCartItems and sending it over to homepage in index.js
     // The second part of the method triggers the popup to appear for three seconds with all the information about the order by setting the React state property called popup to true whenever the add to cart buttons are clicked on.
     // popup is then set back to false after three seconds to hide the popup
     addCartHandler = () => {
@@ -107,7 +112,8 @@ class Roll extends Component {
         localStorage.setItem("CartItem-"+newRoll["type"]+"-"+newRoll["glazing"]+"-"+newRoll["packSize"]+"-"+newRoll["updatedPrice"]+"-"+newRoll["adder"], JSON.stringify(newRoll));
         let listOfCartKeys = Object.keys(localStorage);
         let listOfCartItems = [];
-        listOfCartKeys.map(key => listOfCartItems.push(JSON.parse(localStorage.getItem(key))))
+        listOfCartKeys.map(key => listOfCartItems.push(JSON.parse(localStorage.getItem(key))));
+        // printed out the cart in local storage whenever it is updated
         console.log("printing out local storage without parsing the data after adding a cart item:", localStorage);
         console.log("printing out parsed local storage after adding a cart item:", listOfCartItems);
         this.props.sendDataToHomepage(listOfCartItems);

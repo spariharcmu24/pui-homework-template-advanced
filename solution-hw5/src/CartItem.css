@@ -1,3 +1,4 @@
+/* added styling for cart items that are being displayed in shopping cart */
 .order-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
