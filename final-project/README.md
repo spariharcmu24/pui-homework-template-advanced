@@ -17,14 +17,21 @@ Based on user feedback, one concern was confusion regarding the “let it go” 
 ## Usability Test
 
 Here are the four tasks that I asked my participants to do during the usability testing sessions:
+
 Task #1: Please try to create a journal entry and to save that entry to the website.
+
 Task #2: Please try to create an audio recording that you don’t want to save to the website.
+
 Task #3: Try to start another audio recording, but imagine that you decide to not continue with working on a session.
+
 Task #4: Please try to access and remove the audio recording that you created on October 15th.
 
 Here are some follow-up questions I asked the participants:
+
 Is there anything that you found odd about the website?
+
 How do you like the visuals of this website?
+
 Do you feel any sense of calm when working with this website?
 
 Here is the overall feedback I got from both participants regarding the four tasks and the follow-up questions:
