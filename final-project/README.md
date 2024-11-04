@@ -26,6 +26,7 @@ Task #3: Try to start another audio recording, but imagine that you decide to no
 
 Task #4: Please try to access and remove the audio recording that you created on October 15th.
 
+
 Here are some follow-up questions I asked the participants:
 
 Is there anything that you found odd about the website?
@@ -33,6 +34,7 @@ Is there anything that you found odd about the website?
 How do you like the visuals of this website?
 
 Do you feel any sense of calm when working with this website?
+
 
 Here is the overall feedback I got from both participants regarding the four tasks and the follow-up questions:
 The first participant for my usability testing had the most concern regarding the “let it go” button on the page where a user can create a journal entry. They believed that the wording behind that button didn’t coincide with its function and required more direct wording to hint on what the button is supposed to do, which is to help users complete their journaling session. They also mentioned that the blurred-out background that appears when a user sometimes clicks on buttons throughout the prototype is still showing through too much when there is overlaying text on top of it, which doesn’t make it visually appealing. They also mentioned that there needs to be more visual separation between the self-reflection sessions that appear on the page where kept sessions exist. 
