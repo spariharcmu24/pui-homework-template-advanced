@@ -17,8 +17,6 @@ Updated Prototype After Receiving User Feedback:
 
 ![updated prototype](images/second_prototype.png)
 
-…
-
 ## Usability Test
 
 **Here are the four tasks that I asked my participants to do during the usability testing sessions:**
