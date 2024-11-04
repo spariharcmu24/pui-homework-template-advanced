@@ -8,9 +8,14 @@ The basic idea of this project is to give users the option to self-reflect throu
 
 ### *Prototype 1*
 
-![title for prototype1](images/prototype1.png)
+![first prototype](images/first_prototype.png)
+
 I decided to create one high-fi prototype that consists of the majority of the core features of my application instead of creating two separate prototypes each focusing on one separate core feature. My high-fi prototype consists of these core features: creating a journal entry, creating an audio recording, and accessing the kept sessions page. 
 Based on user feedback, one concern was confusion regarding the “let it go” button and the “changed your mind?” button that appears on the page where you create a journal entry. There was also concern regarding the lack of specific functions that help users to create audio recordings. Another concern was the process of listening to a previous audio recording on the page where you can access previously kept self-reflection sessions.
+
+Updated Prototype After Receiving User Feedback:
+
+![updated prototype](images/second_prototype.png)
 
 …
 
@@ -45,21 +50,21 @@ I went through how I implemented feedback I got to change my final design below 
 
 ## Updated Designs
 
-Show screenshots of your updated design based on the user feedback (\<100 words, \~2 images).
 [image one]
+![let it go button](images/let_it_go_button.png)
 The biggest change I made to the final design was to replace the “let it go” button with a pop-up that appears that asks the user if they are sure that they would like to save or not save their self-reflection session. It’ll help to streamline the process of completing the self-reflection session without needing the user to think about what the “let it go” button is even supposed to do.
 
 
-[image two]
+![pop up](images/pop_up.png)
 I also added pop-ups to replace  instances where I overlaid text on top of the blurred-out pages to create more of a visual separation between the text and the background.
 
-[image three]
+![audio recording buttons](images/audio_recording_buttons.png)
 I also added more buttons on the page that helps users to create audio recordings. They help users to pause or continue their recordings whenever they want.
 
-[image four]
+![replay functions](images/replay_functions.png)
 Additionally, I added more visual separation between the sessions shown on the Kept Sessions page of the website by adding a line between sessions. I also added more functions to audio sessions that appear on the Kept Sessions page to let users pause or continue recordings while also letting users drag the progress bar to a specific part of the recording that they would like to hear.
 
-[image five]
+![no entry display](images/no_entry_display.png)
 Additionally, I decided to completely remove the display of the journal entry that appears whenever the user decides to save a journal entry. However, I might work on letting users access audio sessions or journal entries by clicking on the heart icons on the monthly calendar if I have enough time to work on that function later on.
 
 I also replaced the “changed your mind?” button with a “take me back home” button since I thought it had more direct wording. Finally, I also changed the typeface of the entire website from Merriweather to Lexend to create a more friendly and calm atmosphere to the website.
@@ -69,8 +74,6 @@ I also replaced the “changed your mind?” button with a “take me back home�
 There was a suggestion to create disappear animations to the design of my website, which I tried doing with delayed dissolve animations in my Figma prototype; I would like to mimic those transitions when coding my website. There was also another recommendation to have clearer wording for the functionality of some of my buttons. This is also the same recommendation I got from my users when I did my usability testing sessions. I decided to change the “changed your mind?” button with more direct wording; I changed the text to “take me back home” instead. I also decided to completely delete the “let it go” button since it was too confusing and replaced it with a pop-up instead. Additionally, one student during the lab session mentioned that I should annotate the calendar with different icons related to different phases of a user’s self-growth journey. Even though I think it’s a good idea, I decided to stick with one heart icon to keep the interface simple. Multiple people during the lab session mentioned that letting users create accounts on the website would be helpful, so I am planning on adding that to the design of my website even though I did not add that functionality to my Figma prototype. Multiple people mentioned that adding more animations to the website would be great additions to the website; I did add some dissolve transitions when pop-ups appear on the prototype or when deleting self-reflection sessions from the Kept Sessions page, but I probably won’t add more animations unless I have the time to work on them later on. 
 
 ## Milestones
-
-Outline weekly milestones to plan your expected implementation progress until the end of the semester (\~300 words). 
 
 ### *Implementation Plan*
 
