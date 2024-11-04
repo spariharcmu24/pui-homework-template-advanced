@@ -10,7 +10,8 @@ The basic idea of this project is to give users the option to self-reflect throu
 
 ![first prototype](images/first_prototype.png)
 
-I decided to create one high-fi prototype that consists of the majority of the core features of my application instead of creating two separate prototypes each focusing on one separate core feature. My high-fi prototype consists of these core features: creating a journal entry, creating an audio recording, and accessing the kept sessions page. 
+I decided to create one high-fi prototype that consists of the majority of the core features of my application instead of creating two separate prototypes each focusing on one separate core feature. My high-fi prototype consists of these core features: creating a journal entry, creating an audio recording, and accessing the kept sessions page.
+
 Based on user feedback, one concern was confusion regarding the “let it go” button and the “changed your mind?” button that appears on the page where you create a journal entry. There was also concern regarding the lack of specific functions that help users to create audio recordings. Another concern was the process of listening to a previous audio recording on the page where you can access previously kept self-reflection sessions.
 
 Updated Prototype After Receiving User Feedback:
@@ -42,7 +43,9 @@ Do you feel any sense of calm when working with this website?
 **Here is the overall feedback I got from both participants regarding the four tasks and the follow-up questions:**
 
 The first participant for my usability testing had the most concern regarding the “let it go” button on the page where a user can create a journal entry. They believed that the wording behind that button didn’t coincide with its function and required more direct wording to hint on what the button is supposed to do, which is to help users complete their journaling session. They also mentioned that the blurred-out background that appears when a user sometimes clicks on buttons throughout the prototype is still showing through too much when there is overlaying text on top of it, which doesn’t make it visually appealing. They also mentioned that there needs to be more visual separation between the self-reflection sessions that appear on the page where kept sessions exist. 
+
 The second participant also believed that the “let it go” button was confusing as well and had a similar suggestion to change the wording of that button. They also didn’t understand the need for that button specifically if the website is already asking the user whether or not they want to save a self-reflection session. They had a similar concern regarding the wording of the “changed your mind?” button on the same page. They were also concerned about the lack of functions that exist when a user creates an audio recording. The initial prototype only has one button with a mic icon on it that lets users record audio, but the participant mentioned that there should be more buttons that can help users stop, continue, or finish their recordings. They also would’ve wanted to see more functions that could help them listen to previous recordings on the Kept Sessions page instead of only depending on one button that only starts and stops the recording. They also didn’t find it necessary to show a display of the journaling entry they just created in pop-up form when they decided to save the journaling entry. They instead suggested giving users access to their saved journal entries or audio recordings by clicking on the heart icons on the monthly calendar. Additionally, they mentioned that the typeface that was used for the website should be changed to something that is calmer and friendlier since the current typeface has more of a professional feel to it. 
+
 I went through how I implemented feedback I got to change my final design below in Updated Designs with screenshots.
 
 
