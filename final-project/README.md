@@ -50,22 +50,21 @@ I went through how I implemented feedback I got to change my final design below 
 
 ## Updated Designs
 
-[image one]
 ![let it go button](images/let_it_go_button.png)
-The biggest change I made to the final design was to replace the “let it go” button with a pop-up that appears that asks the user if they are sure that they would like to save or not save their self-reflection session. It’ll help to streamline the process of completing the self-reflection session without needing the user to think about what the “let it go” button is even supposed to do.
+^ The biggest change I made to the final design was to replace the “let it go” button with a pop-up that appears that asks the user if they are sure that they would like to save or not save their self-reflection session. It’ll help to streamline the process of completing the self-reflection session without needing the user to think about what the “let it go” button is even supposed to do.
 
 
 ![pop up](images/pop_up.png)
-I also added pop-ups to replace  instances where I overlaid text on top of the blurred-out pages to create more of a visual separation between the text and the background.
+^ I also added pop-ups to replace  instances where I overlaid text on top of the blurred-out pages to create more of a visual separation between the text and the background.
 
 ![audio recording buttons](images/audio_recording_buttons.png)
-I also added more buttons on the page that helps users to create audio recordings. They help users to pause or continue their recordings whenever they want.
+^ I also added more buttons on the page that helps users to create audio recordings. They help users to pause or continue their recordings whenever they want.
 
 ![replay functions](images/replay_functions.png)
-Additionally, I added more visual separation between the sessions shown on the Kept Sessions page of the website by adding a line between sessions. I also added more functions to audio sessions that appear on the Kept Sessions page to let users pause or continue recordings while also letting users drag the progress bar to a specific part of the recording that they would like to hear.
+^ Additionally, I added more visual separation between the sessions shown on the Kept Sessions page of the website by adding a line between sessions. I also added more functions to audio sessions that appear on the Kept Sessions page to let users pause or continue recordings while also letting users drag the progress bar to a specific part of the recording that they would like to hear.
 
 ![no entry display](images/no_entry_display.png)
-Additionally, I decided to completely remove the display of the journal entry that appears whenever the user decides to save a journal entry. However, I might work on letting users access audio sessions or journal entries by clicking on the heart icons on the monthly calendar if I have enough time to work on that function later on.
+ ^ Additionally, I decided to completely remove the display of the journal entry that appears whenever the user decides to save a journal entry. However, I might work on letting users access audio sessions or journal entries by clicking on the heart icons on the monthly calendar if I have enough time to work on that function later on.
 
 I also replaced the “changed your mind?” button with a “take me back home” button since I thought it had more direct wording. Finally, I also changed the typeface of the entire website from Merriweather to Lexend to create a more friendly and calm atmosphere to the website.
 
@@ -109,12 +108,9 @@ There was a suggestion to create disappear animations to the design of my websit
 ### *Libraries and Other Components*
 
 I am planning on using React to code my website. I also plan on using a react calendar component library to add a calendar to the main page of my website, like react-calendar or react-big-calendar. I might also use an API that helps to record audio for when users decide to do an audio recording for their self-reflection sessions, such as the MediaStream Recording API. I might also decide to include other JS libraries or other components as I code the website. 
-* 
 
 
 ## Generative AI Use Plan
-
-Outline how you plan to use Generative AI tools to aid in the implementation (\~300 words).
 
 ### *Tool Use*
 
@@ -130,7 +126,8 @@ Even though I am most likely going to be using ChatGPT for most of my questions 
 
 ### *Responsible Use*
 
-How would you use Generative AI responsibly? 
+How would you use Generative AI responsibly?
+
 I would use Generative AI when I need suggestions on how to fix any issues with my code. I won't copy and paste massive amounts of code; I would only use bits of code that I would understand how to use.
 
 ## Links to Prototypes
