@@ -16,7 +16,7 @@ Based on user feedback, one concern was confusion regarding the “let it go” 
 
 ## Usability Test
 
-Here are the four tasks that I asked my participants to do during the usability testing sessions:
+**Here are the four tasks that I asked my participants to do during the usability testing sessions:**
 
 Task #1: Please try to create a journal entry and to save that entry to the website.
 
