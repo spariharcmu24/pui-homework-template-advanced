@@ -24,7 +24,7 @@ Task #2: Please try to create an audio recording that you don’t want to save t
 
 Task #3: Try to start another audio recording, but imagine that you decide to not continue with working on a session.
 
-Task #4: Please try to access and remove the audio recording that you created on October 15th. <br/>
+Task #4: Please try to access and remove the audio recording that you created on October 15th.
 
 
 **Here are some follow-up questions I asked the participants:**
@@ -139,6 +139,7 @@ https://www.figma.com/proto/3UEIE9SsbUbclSC41r37WB/PUI-FP2?node-id=82-79&node-ty
 
 ## Video Clips Displaying Interactions
 Video Clip for initial prototype:
+
 Video Clip for updated prototype:
 
 
