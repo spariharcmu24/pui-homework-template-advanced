@@ -24,7 +24,7 @@ Task #2: Please try to create an audio recording that you don’t want to save t
 
 Task #3: Try to start another audio recording, but imagine that you decide to not continue with working on a session.
 
-Task #4: Please try to access and remove the audio recording that you created on October 15th.
+Task #4: Please try to access and remove the audio recording that you created on October 15th. <br/>
 
 
 **Here are some follow-up questions I asked the participants:**
