@@ -10,6 +10,12 @@ The basic idea of this project is to give users the option to self-reflect throu
 
 ![first prototype](images/first_prototype.png)
 
+Link to initial prototype before receiving user feedback: 
+https://www.figma.com/proto/3UEIE9SsbUbclSC41r37WB/PUI-FP2?node-id=15-17&node-type=canvas&t=vufWZL0Mb4qj9a45-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=15%3A17&hotspot-hints=0
+
+Video Clip for interactions of initial prototype:
+https://drive.google.com/file/d/1qQA0KgOpLNNh_xPEyaKF5UZFbraNx-yM/view?usp=sharing
+
 I decided to create one high-fi prototype that consists of the majority of the core features of my application instead of creating two separate prototypes each focusing on one separate core feature. My high-fi prototype consists of these core features: creating a journal entry, creating an audio recording, and accessing the kept sessions page.
 
 Based on user feedback, one concern was confusion regarding the “let it go” button and the “changed your mind?” button that appears on the page where you create a journal entry. There was also concern regarding the lack of specific functions that help users to create audio recordings. Another concern was the process of listening to a previous audio recording on the page where you can access previously kept self-reflection sessions.
@@ -17,6 +23,13 @@ Based on user feedback, one concern was confusion regarding the “let it go” 
 Updated Prototype After Receiving User Feedback:
 
 ![updated prototype](images/second_prototype.png)
+
+Link to updated prototype after receiving user feedback:
+https://www.figma.com/proto/3UEIE9SsbUbclSC41r37WB/PUI-FP2?node-id=82-79&node-type=canvas&t=flW8typCMxO8WeZM-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=82%3A79&hotspot-hints=0
+
+Video Clip for interactions of updated prototype:
+https://drive.google.com/file/d/1IOY1NWn25eXo-h5EuaivtNEdfxcd6UfP/view?usp=sharing
+
 
 ## Usability Test
 
@@ -132,19 +145,17 @@ How would you use Generative AI responsibly?
 I would use Generative AI when I need suggestions on how to fix any issues with my code. I won't copy and paste massive amounts of code; I would only use bits of code that I would understand how to use.
 
 ## Links to Prototypes
-Link for prototype before receiving user feedback: 
+Link to initial prototype before receiving user feedback: 
 https://www.figma.com/proto/3UEIE9SsbUbclSC41r37WB/PUI-FP2?node-id=15-17&node-type=canvas&t=vufWZL0Mb4qj9a45-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=15%3A17&hotspot-hints=0
 
-Link for updated prototype after receiving user feedback:
+Link to updated prototype after receiving user feedback:
 https://www.figma.com/proto/3UEIE9SsbUbclSC41r37WB/PUI-FP2?node-id=82-79&node-type=canvas&t=flW8typCMxO8WeZM-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=82%3A79&hotspot-hints=0
 
 ## Video Clips Displaying Interactions
 Video Clip for initial prototype:
-
 https://drive.google.com/file/d/1qQA0KgOpLNNh_xPEyaKF5UZFbraNx-yM/view?usp=sharing
 
 Video Clip for updated prototype:
-
 https://drive.google.com/file/d/1IOY1NWn25eXo-h5EuaivtNEdfxcd6UfP/view?usp=sharing
 
 
