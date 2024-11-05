@@ -8,6 +8,8 @@ The basic idea of this project is to give users the option to self-reflect throu
 
 ### *Prototype 1*
 
+**Initial Prototype Before Receiving User Feedback**
+
 ![first prototype](images/first_prototype.png)
 
 Link to initial prototype before receiving user feedback: 
@@ -16,11 +18,13 @@ https://www.figma.com/proto/3UEIE9SsbUbclSC41r37WB/PUI-FP2?node-id=15-17&node-ty
 Video Clip for interactions of initial prototype:
 https://drive.google.com/file/d/1qQA0KgOpLNNh_xPEyaKF5UZFbraNx-yM/view?usp=sharing
 
+Brief Summary of User Feedback:
+
 I decided to create one high-fi prototype that consists of the majority of the core features of my application instead of creating two separate prototypes each focusing on one separate core feature. My high-fi prototype consists of these core features: creating a journal entry, creating an audio recording, and accessing the kept sessions page.
 
 Based on user feedback, one concern was confusion regarding the “let it go” button and the “changed your mind?” button that appears on the page where you create a journal entry. There was also concern regarding the lack of specific functions that help users to create audio recordings. Another concern was the process of listening to a previous audio recording on the page where you can access previously kept self-reflection sessions.
 
-Updated Prototype After Receiving User Feedback:
+**Updated Prototype After Receiving User Feedback:**
 
 ![updated prototype](images/second_prototype.png)
 
