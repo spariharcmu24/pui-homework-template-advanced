@@ -132,8 +132,6 @@ I am planning on using React to code my website. I also plan on using a react ca
 
 ### *Tool Use*
 
- What would you use? Edit the list given your plan. For each tool, explain briefly on what do you expect Generative AI to help you with and what might it not be able to help you with.
-
 * ChatGPT  
   * I most likely would use ChatGPT to help me with my implementation of the final project. If I have any issues with the logic of my code, I might ask ChatGPT for any suggestions on how I can fix any bugs that are really difficult for me to figure out on my own. I can imagine myself not being able to find tips or suggestions on Stack Overflow or other articles online that can ultimately help me, so using ChatGPT in those scenarios would be tremendously beneficial.  
   * I also might ask ChatGPT questions regarding how to use new libraries or other components that I have never used before, like the MediaStream Recording API. 
