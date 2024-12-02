@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Outlet, Link } from "react-router-dom";
+import './keptsessionentry.css';
+// import './journal.css';
 // This file acts as the homepage for the website.
 class KeptSessionEntry extends Component {
   constructor(props) {
@@ -51,7 +53,7 @@ class KeptSessionEntry extends Component {
             <div>
                 <h2>{this.props.date}</h2>
                 <h3>Type of Session: {this.props.type}</h3>
-                <h2>{this.props.entry}</h2>
+                <h2 id="entry-text">{this.props.entry}</h2>
                 <button type="button" onClick={this.deleteMaybe}>Delete</button>
                 <hr id="hr-line" />
             </div> 

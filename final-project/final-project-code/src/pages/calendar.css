@@ -1,0 +1,19 @@
+/* .fc-daygrid {
+    border: 1px solid black;
+}
+
+.calendar .fc-daygrid-day {
+    border: 1px solid black;
+    border-top: 1px solid black;
+} */
+
+.fc-day-header {
+    /* border-top: 1px solid black; */
+    background-color: black;
+
+}
+
+/* .calendar .fc {
+    border: 1px solid black;
+} */
+

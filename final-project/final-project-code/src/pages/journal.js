@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Outlet, Link } from "react-router-dom";
+import './journal.css';
 // import '../../App.css';
 // This file acts as the homepage for the website.
 class JournalPage extends Component {
@@ -28,7 +29,14 @@ class JournalPage extends Component {
     // console.log("date")
     // console.log(date);
     let currEntry = document.getElementById("journal-entry").value;
+    let currDate = new Date();
+    let month = currDate.getMonth()+1;
+    let day = currDate.getDate();
+    let year = currDate.getFullYear();
     let entryObject = {
+      month: month,
+      day: day,
+      year: year,
       date: this.getDate(),
       entry: currEntry,
       type: "journal entry"
@@ -129,20 +137,20 @@ class JournalPage extends Component {
           <header>
           </header>
           <div id="Navbar">
-            <h1>Self-Reflection Into the Void</h1>
+            <p className="title">Self-Reflection Into the Void</p>
           </div>
           <div id="homepage-body">
-            <p>Date of Your Journal Entry: {this.getDate()}</p>
-            <p>Please write what you're feeling below:</p>
-            <input id="journal-entry" type="text" />
-            <p>Would you like to keep your journal entry for later?</p>
-            <div id="reflection-buttons">
-                <button type="button" onClick={this.saveYes}>Yes</button>
-                <button type="button" onClick={this.saveNo}>No</button>
+            <p className="text-date">Date of Your Journal Entry: {this.getDate()}</p>
+            <p className="text">Please write what you're feeling below:</p>
+            <textarea id="journal-entry" type="text"></textarea>
+            <p className="text">Would you like to keep your journal entry for later?</p>
+            <div id="save-buttons">
+                <button id="yes-button" type="button" onClick={this.saveYes}>Yes</button>
+                <button id="no-button" type="button" onClick={this.saveNo}>No</button>
             </div>
             <div id="back-home">
             {/* <Link to="/"> */}
-            <button onClick={this.backHome} type="button">Take me back home</button>   
+            <button id="back-home-button" onClick={this.backHome} type="button">Take me back home</button>   
             {/* </Link>   */}
             </div>
           </div>

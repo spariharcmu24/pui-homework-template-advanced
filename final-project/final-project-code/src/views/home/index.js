@@ -20,24 +20,26 @@ class Homepage extends Component {
           <header>
           </header>
           <div id="Navbar">
-            <h1 className="title">Self-Reflection Into the Void</h1>
-            <Link to="/keptsessions">
+            <p className="title">Self-Reflection Into the Void</p>
+            <Link id='link-kept-sessions' to="/keptsessions">
               <button id="kept-sessions-button" type="button">Your Kept Sessions</button>
             </Link>
           </div>
           <div id="homepage-body">
-            <p>How would you like to self-reflect today?</p>
+            <p className="self-reflect-text">How would you like to self-reflect today?</p>
             <div id="reflection-buttons">
                 <Link to="/journal">
-                  <button type="button">Journal</button>
+                  <button id="journal-button" type="button">Journal</button>
                 </Link>
                 <Link to="/audiorecord">
-                  <button type="button">Audio Record</button>
+                  <button id="audio-button" type="button">Audio Record</button>
                 </Link>
             </div>
             <div id="monthly-calendar">
-                <p>Your Monthly Calendar to Document Your Self-Care Journey</p>
-                <Calendar />
+                <p className="self-reflect-text">Your Monthly Calendar to Document Your Self-Care Journey</p>
+                <div className="calendar">
+                  <Calendar />
+                </div>
             </div>
           </div>
         </div>
