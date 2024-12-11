@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     // created routes to different pages in the app, including home page, journal page, and kept sessions page
     return (
-      <Router basename={"/pui-homework-template-advanced"}>
+      <Router basename="/pui-homework-template-advanced">
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/journal" element={<JournalPage />} />
