@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/pui-homework-template-advanced/static/css/main.c02f39b2.css",
-    "main.js": "/pui-homework-template-advanced/static/js/main.530b7589.js",
+    "main.js": "/pui-homework-template-advanced/static/js/main.2a7bfe6a.js",
     "static/js/453.1cfa9443.chunk.js": "/pui-homework-template-advanced/static/js/453.1cfa9443.chunk.js",
     "index.html": "/pui-homework-template-advanced/index.html",
     "main.c02f39b2.css.map": "/pui-homework-template-advanced/static/css/main.c02f39b2.css.map",
-    "main.530b7589.js.map": "/pui-homework-template-advanced/static/js/main.530b7589.js.map",
+    "main.2a7bfe6a.js.map": "/pui-homework-template-advanced/static/js/main.2a7bfe6a.js.map",
     "453.1cfa9443.chunk.js.map": "/pui-homework-template-advanced/static/js/453.1cfa9443.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c02f39b2.css",
-    "static/js/main.530b7589.js"
+    "static/js/main.2a7bfe6a.js"
   ]
 }
