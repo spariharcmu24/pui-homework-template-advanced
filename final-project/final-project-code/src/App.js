@@ -15,9 +15,9 @@ class App extends Component {
       <Router basename={"/pui-homework-template-advanced"}>
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="journal" element={<JournalPage />} />
+          <Route path="/journal" element={<JournalPage />} />
           {/* <Route path="audiorecord" element={<AudioRecord />} /> */}
-          <Route path="keptsessions" element={<KeptSessions />} />
+          <Route path="/keptsessions" element={<KeptSessions />} />
         </Routes>
       </Router>
     );
