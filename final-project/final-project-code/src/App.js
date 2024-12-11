@@ -6,11 +6,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import KeptSessions from './pages/keptsessions.js';
 // import AudioRecord from './pages/audiorecord.js';
 
+const ROUTER_BASENAME = process.env.REACT_APP_ROUTER_BASENAME;
+
 class App extends Component {
   render() {
     // created routes to different pages in the app, including home page, journal page, and kept sessions page
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={ROUTER_BASENAME}>
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="journal" element={<JournalPage />} />
