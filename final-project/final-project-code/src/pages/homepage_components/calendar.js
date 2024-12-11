@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import FullCalendar from '@fullcalendar/react';
-import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
+import dayGridPlugin from '@fullcalendar/daygrid';
 import './calendar.css';
+
 
 class Calendar extends Component {
     constructor(props){
@@ -24,18 +25,16 @@ class Calendar extends Component {
             let year = currEntryDay["year"].toString();
             let currDayElem = year+"-"+month+"-"+specificDay;
             entryDates.push(currDayElem);
-            // console.log("YERRRRRRR meheheh");
-            // console.log(currDayElem);
         }
         // entryDates.push("2024-11-13");
         // entryDates.push("2024-11-01");
         let iconDates = {};
-        console.log(entryDates);
+        // console.log(entryDates);
         for (let i = 0; i<entryDates.length; i++){
-            iconDates[entryDates[i]] = "<3";
+            iconDates[entryDates[i]] = "💜";
         }
-        console.log("icon dates");
-        console.log(iconDates);
+        // console.log("icon dates");
+        // console.log(iconDates);
         super(props); 
         this.state = {
             iconDates: iconDates,
@@ -51,7 +50,6 @@ class Calendar extends Component {
                 let iconElem = document.createElement('div');
                 iconElem.className = 'heart-icon';
                 iconElem.textContent = this.state.iconDates[dateStr];
-
                 dayEventDiv.parentNode.appendChild(iconElem);
             }
 

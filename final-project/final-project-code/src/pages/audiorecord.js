@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { Outlet, Link } from "react-router-dom";
-// import '../../App.css';
-// This file acts as the homepage for the website.
+
 class AudioRecord extends Component {
-  // Created state properties listCart, rolls, searchedRolls, and searched to keep track of search functionality, sort functionality, and cart functionality
   constructor(props) {
     super(props);
     this.state = {

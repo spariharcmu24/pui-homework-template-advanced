@@ -17,3 +17,9 @@
     border: 1px solid black;
 } */
 
+.heart-icon {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+

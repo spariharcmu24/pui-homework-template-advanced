@@ -1,0 +1,49 @@
+body {
+    background-color: #D3CCE3;
+    font-family: 'Lexend';
+}
+
+#homepage-keptsessions-body {
+    margin-top: 10px;
+}
+
+.title {
+    text-align: center;
+}
+
+.text-session-title {
+    font-size: 35px;
+    margin-left: 150px;
+}
+
+#back-home-button {
+    font-size: 25px;
+    background-color: #DFCCE3;
+    font-family: 'Lexend';
+    width: 300px;
+    height: 75px;
+    border-radius: 15px;
+    border-width: 3px;
+    margin-top: 75px;
+    margin-bottom: 150px;
+    margin-left: 60%;
+    margin-right: 20%;
+}
+
+#back-home-button:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#no-match {
+    font-size: 30px;
+    margin-left: 150px;
+    margin-bottom: 0px;
+}
+
+.blurred {
+    filter: blur(5px);
+    pointer-events: none;
+    user-select: none;
+    opacity: 0.7;
+}
