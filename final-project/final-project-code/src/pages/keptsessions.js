@@ -3,14 +3,12 @@ import { Outlet, Link } from "react-router-dom";
 import KeptSessionEntry from './kept_sessions_page_components/keptsessionentry.js';
 import './keptsessions.css';
 
-
+// This file acts as the Kept Sessions page
 class KeptSessions extends Component {
   constructor(props) {
     let submittedEntriesKeys = Object.keys(localStorage);
     let submittedEntries = [];
     submittedEntriesKeys.map(key => submittedEntries.push(JSON.parse(localStorage.getItem(key))))
-    // console.log("let's check local storage");
-    // console.log(submittedEntries);
     let keptListEntries = [];
     for (let i = 0; i < submittedEntries.length; i++){
       let currEntry = submittedEntries[i];
@@ -18,8 +16,6 @@ class KeptSessions extends Component {
         keptListEntries.push(currEntry);
       }
     }
-    console.log("kept list")
-    console.log(keptListEntries);
     super(props);
     this.state = {
       submittedEntryList: [...keptListEntries],
@@ -27,22 +23,22 @@ class KeptSessions extends Component {
     };        
   } 
 
+  // updates the list of sessions that are being saved, especially if user decides to remove an entry from the list of kept sessions
   handleDataFromEntry = (data) => {
     this.setState({submittedEntryList: data});
   }
   
+  // helps to blur out the page when a popup appears
   handlePopupInfo = (popupInfo) => {
     this.setState({isPopupDisplayed: popupInfo})
-    console.log("heyyy, just checkin");
-    console.log(popupInfo);
   }
   
   render() {
     return (
       <div className="JournalPage">
-        <div id="container">
+        <div>
           <header>
-            <div id="Navbar" className={`${this.state.isPopupDisplayed ? "blurred" : ""}`}>
+            <div className={`${this.state.isPopupDisplayed ? "blurred" : ""}`}>
               <h1 className="title">Self-Reflection Into the Void</h1>
             </div>
           </header>

@@ -8,6 +8,7 @@ import KeptSessions from './pages/keptsessions.js';
 
 class App extends Component {
   render() {
+    // created routes to different pages in the app, including home page, journal page, and kept sessions page
     return (
       <BrowserRouter>
         <Routes>

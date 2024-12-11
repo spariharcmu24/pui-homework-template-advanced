@@ -8,8 +8,6 @@ class JournalPage extends Component {
     let submittedEntriesKeys = Object.keys(localStorage);
     let submittedEntries = [];
     submittedEntriesKeys.map(key => submittedEntries.push(JSON.parse(localStorage.getItem(key))))
-    // console.log("here we go");
-    // console.log(submittedEntries);
     super(props);
     this.state = {
       submittedEntryList: submittedEntries,
@@ -57,13 +55,10 @@ class JournalPage extends Component {
         inKeptSessions: savingEntry
       }
     }
-    // console.log("yuhhhhh")
-    // console.log(entryObject);
     this.setState((prevState) => ({
       submittedEntryList: [...prevState.submittedEntryList, entryObject]
     }));
     localStorage.setItem("Entry-"+entryObject["date"], JSON.stringify(entryObject));
-    console.log(localStorage);
   }
 
   //gets today's date
@@ -73,14 +68,11 @@ class JournalPage extends Component {
     let day = currDate.getDate();
     let year = currDate.getFullYear();
     let shownDate = month + "/" + day + "/" + year;
-    // console.log("yerrr");
-    // console.log(shownDate);
     return shownDate;
   }
 
   // makes popup appear that asks the user if they're sure that they would like to go back to the home page
   backHome = () => {
-    // console.log("HIIII");
     this.setState({popupBackHome: true, isPopupDisplayed: true});
   }
   
@@ -106,10 +98,7 @@ class JournalPage extends Component {
   // or shows popup that asks users if they are sure they would like to save their current entry
   saveYes = () => {
     let currEntry = document.getElementById("journal-entry").value;
-    // console.log("what shows up if trying to print out what's in text field");
-    // console.log(currEntry);
     if (currEntry === ""){
-      // console.log("heyyy");
       this.setState({popupForEmptyEntry: true, isPopupDisplayed: true}, () => {
         setTimeout(() => {
           this.setState({popupForEmptyEntry: false, isPopupDisplayed: false});
