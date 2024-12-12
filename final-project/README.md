@@ -99,15 +99,21 @@ Please test out website using these two dimensions (add these dimensions when in
 ## Accessibility
 
 Screenshots for Home Page:
+
 ![summary for home page](images/summary_one.png)
+
 ![details for home page](images/details_one.png)
 
 Screenshots for Journal Page:
+
 ![summary for journal page](images/summary_two.png)
+
 ![details for journal page](images/details_two.png)
 
 Screenshots for Kept Sessions Page:
+
 ![summary for kept sessions page](images/summary_three.png)
+
 ![details for kept sessions page](images/details_three.png)
 
 
