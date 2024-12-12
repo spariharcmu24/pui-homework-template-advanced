@@ -1,8 +1,5 @@
 # **FP4 \- Final Project Writeup**
 
-Feel free to refer to this [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/) to make your writeup more organized, and you can preview your markdown file in VSCode [Markdown editing with Visual Studio Code](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview). 
-
-
 ## Part 1: Website Description
 
 My final project is a self-reflection website called Self-Reflection into the Void that gives users the option to self-reflect through the process of journaling without having the need to store those journaling sessions. Giving users the option to not store their self-reflection sessions can give them the peace of mind knowing that their personal information and issues will not be stored. However, for each day a self-reflection session is created, there will be a purple heart icon displayed on the monthly calendar on the home page regardless of whether or not the user decides to store their journal entry. Keeping track of the days of self-reflection can help users keep track of their self-care process. The motivation behind this idea is to encourage people to take care of their mental health through self-reflection and the documentation of their self-growth journey.
