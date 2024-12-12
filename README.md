@@ -1,4 +1,4 @@
-# PUI:E homework
+# PUI:E Final Project
 
 Deployed website for final project: https://spariharcmu24.github.io/pui-homework-template-advanced
 
