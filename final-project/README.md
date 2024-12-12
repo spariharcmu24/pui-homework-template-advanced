@@ -1,3 +1,120 @@
+# **FP4 \- Final Project Writeup**
+
+Feel free to refer to this [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/) to make your writeup more organized, and you can preview your markdown file in VSCode [Markdown editing with Visual Studio Code](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview). 
+
+
+## Part 1: Website Description
+
+My final project is a self-reflection website called Self-Reflection into the Void that gives users the option to self-reflect through the process of journaling without having the need to store those journaling sessions. Giving users the option to not store their self-reflection sessions can give them the peace of mind knowing that their personal information and issues will not be stored. However, for each day a self-reflection session is created, there will be a purple heart icon displayed on the monthly calendar on the home page regardless of whether or not the user decides to store their journal entry. Keeping track of the days of self-reflection can help users keep track of their self-care process. The motivation behind this idea is to encourage people to take care of their mental health through self-reflection and the documentation of their self-growth journey.
+
+What makes the app engaging is the concept of giving the users as much control over their self-reflection process as possible. Each time the user decides to make the decision of saving or not saving a self-reflection entry, pop-ups will appear on the web page that asks the user whether or not they would like to stick to their decision. There is also the option of letting users remove specific entries that they decided to save in the past if they don’t feel comfortable with seeing any specific entries they have previously written. The target audience of this app is anyone who is invested in their mental health or anyone who would like to start their mental health journey. The target audience also consists of people who care about personal data privacy.
+
+A future iteration of this app would include the process of submitting an audio recording as a self-reflection session as well as account settings. 
+
+
+## Part 2: User Interaction
+
+Here is a list of all the user interactions on my website:
+* Accessing the Kept Sessions page (where all the saved entries are stored)
+    * Click on the “Your Kept Sessions” button and get redirected to the kept sessions page.
+    * Click on the delete button for any of the entries that have been previously saved (need to submit a journal entry if there are no previously saved entries shown).
+        * A pop-up appears that asks the user if they are sure they would like to remove the journal entry. User either clicks “yes” button or “no” button
+            * Clicking on “yes” removes entry from the list of kept entries and redirect user to the home page (can then click back on “Your Kept Sessions” button on the home page to see that journal entry was removed)
+            * Clicking on “no” makes popup disappear
+    * Click on “Take me back home” button to be redirected back to the home page
+* Creating a journaling entry for a self-reflection session
+    * Click on “Journal” button on the home page
+        * If user has already created a journal entry for current day, a pop-up will appear that says that user should come back and journal another day since an entry has already been created (for testing purposes: if you’ve already created a journal entry for today and you still want access to the journaling page, you would have to delete whatever is in local storage so that you can get access to the journal page again when clicking on this button → this will unfortunately delete whatever you’ve written previously for the current day)
+            * (To remove whatever is in local storage, inspect the page, click on the Application tab, click on the clear all icon under local storage, and then reload the page → if you see three elements in local storage after reloading, they are meant to be there; they exist for demonstration purposes to show the heart icons on the monthly calendar)
+        * If user has not created a journal entry yet, they will be redirected to the journal page
+            * Click on text area box and type whatever you are feeling in it
+            * Scroll down the page and either click on “yes” or “no” buttons to save or not save the journal entry
+                * Clicking on “yes” button makes pop-up appear that asks if the user is sure that they would like to save their entry with an additional set of “yes” or “no” buttons
+                    * Clicking on “yes” saves entry and redirects user to the home page
+                    * Clicking on “no” doesn’t save entry and makes the popup disappear
+                * Clicking on “no” button makes pop-up appear that asks if the user is sure that they would not like to save their entry with an additional set of “yes” or “no” buttons
+                    * Clicking on “yes” makes the decision to not save entry but will still display heart icon on monthly calendar for that day; user also gets redirected to the home page
+                    * Clicking on “no” doesn’t make the decision to not save the entry and makes the popup disappear
+            * Click on “Take me back home” button to be redirected back to the home page
+                * Another set of “yes” or “no” buttons appear to make sure that user wants to actually be redirected to the home page
+* Interacting with the Monthly Calendar
+    * Click on the right arrow button at the top right of the calendar to show the monthly calendar for the upcoming month
+    * Click on the left arrow button at the top right of the calendar to show the monthly calendar for the previous month
+    * Click on “today” button to get redirected back to current month on the calendar
+
+## Part 3: External Tool
+
+1. Full Calendar 
+   * Full Calendar is a React component library built on top of Full Calendar’s core Javascript library that allowed me to integrate a monthly calendar onto my home page.
+   * I chose to use it since I thought it would be more efficient to use a calendar that has already been created instead of creating one on my own.
+   * I used it by importing the library and calling the Full Calendar component on my calendar.js file. I already knew that Full Calendar existed, but never successfully used it before, so I decided to use this library instead of another one.
+
+2. Google Fonts
+   * I used Google Fonts so that I can get access to a font called Lexend, which is the font I used for the entirety of my website.
+   * I used Google Fonts since I thought it was an easy way to incorporate the font that I wanted to use for my website.
+   * I got access to the font by adding a few link elements to my index.html file and using Lexend as the font-family value for my CSS files.
+
+## Part 4: Design Iteration
+
+After creating the Figma prototypes for my FP2 submission, I transitioned into coding out my website. I decided that I needed to scale down due to the time constraints I had to work on this project; I didn’t implement one of my initial core functionalities, which was to let users submit an audio recording as a self-reflection session. I also wanted to create an account setup for my website, but I probably can create the setup for a future iteration of my website as well as the audio recording option. Additionally, my website doesn’t fully align with all the visuals of my Figma prototypes, but it’s very similar.
+
+## Part 5: Implementation Challenge
+
+One challenge I had to deal with was displaying the purple heart icons in the monthly calendar. Since I didn’t code out the monthly calendar myself, I needed extra help in understanding Full Calendar’s code. I used ChatGPT to understand how to add the icons while using the Full Calendar library. Another challenge I dealt with was redirecting the user back to the homepage after interacting or seeing a pop-up; I eventually used React Router’s Link component due to ChatGPT’s recommendation.
+
+## Part 6: Generative AI Use and Reflection
+
+### Usage Experiences by Project Aspects
+
+| Tool Name | Ratings | design | plan | write code | debug |
+| :---- | :---- | :---- | :---- | :---- | :---- |
+| ChatGPT | Usage | No | No | Yes | Yes |
+| ChatGPT | Productivity | ~ | ~ | 5 | 5 |
+
+
+### Usage Reflection
+
+I used ChatGPT whenever I needed suggestions on how to fix any difficult bugs I found in my code. Additionally, I used it to understand how to use the Full Calendar library properly, especially when I was trying to add the purple heart icons in the monthly calendar. The majority of my code was authored by me, but I used ChatGPT’s code specifically to display the purple heart icons, which is in calendar.js in the renderDayCell function. I also took some recommendations that ChatGPT had and integrated smaller parts of generated code into my own code. For example, when I was having issues redirecting the user back to another page after showing them a few of the pop-ups, I used ChatGPT to give me recommendations on how to fix the problem. Eventually, I used React Router’s Link component due to ChatGPT’s recommendation. 
+ 
+Whenever ChatGPT had any coding recommendations regarding how to resolve an issue, I would first give it a try to see if it successfully helped. If it didn’t, then I would ask it more follow-up questions. If the follow-up questions didn’t help, I would find some other way to solve the issue on my own or with other recommendations I found online. 
+
+A good number of the GenAI responses that ChatGPT came up with didn’t give me the solutions that would work well with my code, so I had to ask follow-up questions to get better responses that eventually gave me a solution that worked. I think it made the process of creating my project easier only when I asked it enough follow-up questions for it to come up with better suggestions for my coding issues. One of the biggest insights I found when using ChatGPT was that it’s only helpful if you have the patience to go through the process of repeatedly reading its responses and asking follow-up questions until you get a response that you are satisfied with. 
+
+My usage of ChatGPT aligned with my plan and expectations from FP 2. However, I didn’t ask ChatGPT to list out other components or libraries I can incorporate into my code like I thought I would in FP2.
+
+
+### Usage Log
+
+1. [Chat history about how to redirect user to another page after pop-up appears](https://chatgpt.com/share/675a4e38-1c70-8006-a951-449124123477)
+2. [Chat history about how to add icon to monthly calendar](https://chatgpt.com/share/675a4ee8-f840-8006-9534-5628c8c71022)
+3. [Chat history about CSS styling](https://chatgpt.com/share/675a4feb-0940-8006-bf30-dee229a2cda0)
+4. [Chat history about CSS styling, specifically for pop-ups:](https://chatgpt.com/share/675a505a-b008-8006-9fc4-2dfd12e7ba18)
+5. [Chat history about pages that aren’t the homepage of the website not showing up when reloading the page after deployment](https://chatgpt.com/share/675a5146-64f0-8006-b225-914c77678ae1)
+
+## Responsiveness
+Please test out website using these two dimensions (add these dimensions when inspecting website and make dimensions responsive):
+* Dimensions of an iPad mini 8.3: 744 x 1133
+* Dimensions of a Desktop: 1440 x 1024
+
+## Accessibility
+
+Screenshots for Home Page:
+![summary for home page](images/summary_one.png)
+![details for home page](images/details_one.png)
+
+Screenshots for Journal Page:
+![summary for journal page](images/summary_two.png)
+![details for journal page](images/details_two.png)
+
+Screenshots for Kept Sessions Page:
+![summary for kept sessions page](images/summary_three.png)
+![details for kept sessions page](images/details_three.png)
+
+
+
+---
+
+
 # **FP2 \- Evaluation of the Final project**
 
 ## Project Description
