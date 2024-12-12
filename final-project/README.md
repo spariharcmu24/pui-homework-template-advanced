@@ -95,6 +95,8 @@ Please test out website using these two dimensions (add these dimensions when in
 
 ## Accessibility
 
+Note: When I tried using the WAVE tool website, my website wasn't properly showing up on it. However, when I used the Google Chrome Extension for the WAVE tool, it worked just fine. I am not too sure what the problem could be when using the WAVE tool website. 
+
 Screenshots for Home Page:
 
 ![summary for home page](images/summary_one.png)
