@@ -89,7 +89,7 @@ My usage of ChatGPT aligned with my plan and expectations from FP 2. However, I 
 1. [Chat history about how to redirect user to another page after pop-up appears](https://chatgpt.com/share/675a4e38-1c70-8006-a951-449124123477)
 2. [Chat history about how to add icon to monthly calendar](https://chatgpt.com/share/675a4ee8-f840-8006-9534-5628c8c71022)
 3. [Chat history about CSS styling](https://chatgpt.com/share/675a4feb-0940-8006-bf30-dee229a2cda0)
-4. [Chat history about CSS styling, specifically for pop-ups:](https://chatgpt.com/share/675a505a-b008-8006-9fc4-2dfd12e7ba18)
+4. [Chat history about CSS styling, specifically for pop-ups](https://chatgpt.com/share/675a505a-b008-8006-9fc4-2dfd12e7ba18)
 5. [Chat history about pages that aren’t the homepage of the website not showing up when reloading the page after deployment](https://chatgpt.com/share/675a5146-64f0-8006-b225-914c77678ae1)
 
 ## Responsiveness
